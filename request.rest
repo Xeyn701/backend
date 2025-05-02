@@ -1,0 +1,121 @@
+GET http://localhost:5000/arduino
+
+###
+GET http://localhost:5000/users/59b36557-cb18-478d-a969-97e9d5ff4a6f
+
+###
+GET http://localhost:5000/schedule/relay/190ce0ed-21c0-425d-a506-5bd7a7c1d5e7
+
+###
+http://localhost:5000/humidity/code/hjg3uyrgeyuf4uy
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Rio Imam Pradana",
+    "username": "rio.prdnn",
+    "user_role" : "admin",
+    "password": "Apaansih.701",
+    "email": "rio.imam.pradana@mhs.politala.ac.id"
+}
+
+###
+PATCH http://localhost:5000/relay/4904b8ad-4f8a-419d-a359-deb43800b435
+Content-Type: application/json
+{
+    "status": "on"
+}
+
+###
+DELETE http://localhost:5000/users/2
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "identifier": "john@gmail.com",
+    "password": "12345678"
+}
+
+###
+GET http://localhost:5000/ph/code/hjg3uyrgeyuf4uy
+
+###
+POST http://localhost:5000/arduino
+Content-Type: application/json
+
+{
+    "verification_code": "hjg3uyrgeyuf4uy"
+}
+
+###
+POST http://localhost:5000/Ph
+Content-Type: application/json
+
+{
+    "verification_code": "hjg3uyrgeyuf4uy",
+    "value": "27",
+    "timestamp": ""
+}
+
+###
+POST http://localhost:5000/relay
+Content-Type: application/json
+
+{
+    "relay": "relay3",
+    "value": "on",
+    "description" : "Pompa Air"
+}
+###
+POST http://localhost:5000/humidity
+Content-Type: application/json
+
+{
+    "value": "30"
+}
+
+###
+POST http://localhost:5000/suhua
+Content-Type: application/json
+
+{
+    "value": "28"
+}
+
+###
+POST http://localhost:5000/kelembapan
+Content-Type: application/json
+
+{
+    "value": "50"
+}
+
+###
+POST http://localhost:5000/tds
+Content-Type: application/json
+
+{
+    "value": "870"
+}
+
+###
+POST http://localhost:5000/ph
+Content-Type: application/json
+
+{
+    "value": "8"
+}
+
+###
+
+POST http://localhost:5000/schedule
+Content-Type: application/json
+
+{
+    "relayId": "relay3",
+    "enabled": "0"
+}
